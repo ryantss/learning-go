@@ -24,12 +24,13 @@ func (s *Stack) Push(item int) {
 	// fmt.Println(s)
 }
 
-func (s *Stack) Pop() {
+func (s *Stack) Pop() (item int) {
 	s.i--
-	item := s.data[s.i]
+	item = s.data[s.i]
 	s.data[s.i] = 0
 
 	fmt.Printf("Remove %d from stack\n", item)
+	return
 }
 
 func (s Stack) String() (str string) {
